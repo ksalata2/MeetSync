@@ -1,0 +1,86 @@
+NOTES:
+-populate lists with null values and fill them in later?
+-would make the logic of the program much simpler
+-don't need to insert item into array in order
+-just insert into the index that you KNOW it belongs
+-the month of December always goes into index 11 (12th spot) in the array for example
+-no need to do any sorting
+
+Menu:
+* Prompts the user to enter an option
+* Will check if option is valid
+* Fields:
+	- flag: a boolean
+	- option: holds the option entered by user
+* Methods:
+	- switch(): will check if option is valid 
+
+---------------------------------------------------------
+
+Class: Calendar
+Fields:
+-list of Years
+Methods:
+-newEvent(year, month, day, name, url, priority, repeat)
+-addYear(year)
+-removeYear(year)
+-loadCSV(path)
+-saveCSV(path)
+
+---------------------------------------------------------
+
+Class: Year
+Fields:
+-yearNo
+-list of Months (size 12)
+Methods:
+-addMonth(month)
+-removeMonth(month)
+
+---------------------------------------------------------
+
+Class: Month
+Fields:
+-maxDays
+-list of Days (size maxDays)
+Methods:
+-addDay(day)
+-removeDay(day)
+
+---------------------------------------------------------
+
+Class Day:
+Fields:
+-list of Events
+Methods:
+-addEvent
+-removeEvent
+-listEvents
+
+---------------------------------------------------------
+
+Class Event:
+Fields:
+-name
+-url
+-priority
+-repeat
+Methods:
+-checkEvent
+
+---------------------------------------------------------
+
+MISC OTHER ITEMS:
+Enumerator: MonthNames
+
+---------------------------------------------------------
+
+Class: Media
+* Will check if user has a camera and a microphone
+* Fields:
+	- video: extracts the id from popup.html
+* Notes:
+	The camera and microphone need to be granted
+	permission by the user in order to work.
+
+---------------------------------------------------------

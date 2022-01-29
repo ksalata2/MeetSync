@@ -1,0 +1,68 @@
+
+/* The intention of this file is to keep track of changes*/
+
+-----------------------------------------------------------------------------------
+
+Date: 11/02/2020
+	Changes to popup.html:
+	- Removed "Week's Events"
+	+ Added new "All Events" button
+	+ Added missing title after pressing the "add new event" button
+	+ Added text field to enter a link for meeting
+	+ Added new button to search event by name
+
+	Changes to MenuDraw.js:
+	- Fixed functions showDayEvents(), showMonthsEvents() to display properly
+	+ Added new function showAllMeetings() to display all events
+	+ Added function to clear all fields after form submitted
+	+ Added function to search an event by name (partial name also)
+
+	Changes to Event.js
+	+ Added new attributes to constructor (day, month, time, link)
+
+-----------------------------------------------------------------------------------
+
+Date: 11/03/2020
+	Changes to Event.js:
+	+ Added year attribute
+
+	Changes to Day.js
+	- Fixed the eventConflict() function to properly compare events
+
+	Changes to MenuDraw.js
+	+ Added event check for conflicts
+
+	Changes to Media.js
+	- Fixed camera and microphone to properly display 
+
+	New file:
+	+ Added new "URL.js" file to extract domain from link provided
+
+-----------------------------------------------------------------------------------
+
+Date: 11/06/2020
+	Changes to MenuDraw.js:
+	+ Added new function to print details about event and avoid redundancy
+
+-----------------------------------------------------------------------------------
+
+Date: 11/09/2020
+	Changes to MenuDraw.js:
+	+ Added new function to loop all events every 30 seconds
+
+	Changes to Event.js:
+	+ Added new Date parameter that stores a date() object
+
+	New file:
+	+ Added new "Permission.js" file to send notifications to user
+
+-----------------------------------------------------------------------------------
+
+Date: 11/10/2020
+	New file:
+	+ New file "manifest.json" for extension
+
+	Changes to popup.html:
+	+ Added new "Ok" button to show that event was added
+
+-----------------------------------------------------------------------------------

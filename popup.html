@@ -1,0 +1,127 @@
+<!DOCTYPE <!DOCTYPE html>
+
+<!-- the main page of MeetSync -->
+
+<html>
+    <head>
+            <script defer src="./scripts/MenuDraw.js"></script>
+            <script src="./scripts/Common.js"></script>
+            <script src="./scripts/Event.js"></script>
+            <script src="./scripts/Day.js"></script>
+            <script src="./scripts/Month.js"></script>
+            <script src="./scripts/Year.js"></script>
+            <script src="./scripts/Calendar.js"></script>
+            <script src="./scripts/Media.js"></script>
+            <script src="./scripts/URL.js"></script>
+            <script scr="./scripts/Permission.js"></script>
+            <script src="./scripts/Background.js"></script>
+	
+
+	    <style>
+                .dailyView{
+                    display: block; /* daily overview is the default menu */ 
+                }
+                .addEventView{
+                    display: none; /* hide add event menu until user wants to add event */
+                }
+                .calOptions{
+                    display: none;
+                }
+                .monthlyView{
+                    display: none;
+                }
+                .allView{
+                    display: none;
+                }
+                #container {
+	                margin: 0px auto;
+                    /*width: 300px;
+                    height: 250px;*/
+                    width: 256px;
+                    height: 144px;
+                    /* 16 : 9 aspect ratio */
+                    border: 5px rgb(90, 5, 5) solid;
+                }
+                #videoStream {
+                    /*width: 300px;
+                    height: 250px;*/
+                    width: 256px;
+                    height: 144px;
+                    /* 16 : 9 aspect ratio */
+                    background-color: rgb(202, 198, 198);
+                }
+                ul{
+                    list-style: none;
+                    padding-left: 0;
+                }
+                #conflict{
+                    display: none;
+                }
+        </style>
+    </head>
+ 
+<body>
+  
+<div id="container">
+    <video autoplay="true" id="videoStream"></video>
+ 
+    </head>
+    <body style="text-align: center;">
+        <div class="dailyView">
+            <h1 id="title">MeetSync</h1>
+            <button id="viewCal">View calendar</button>
+            <button id="addEvent">Add new event</button>
+            <ul id="dailyList"><!-- events of the day go here --></ul>
+        </div>
+        <div class="addEventView">
+            <h1 id="title2">MeetSync</h1>
+    
+            <input id="name" placeholder="Meeting name"><br/>
+            <input id="year" placeholder="Enter year"><br/>
+            <input id="month" placeholder="Month number"><br/>
+            <input id="day"  placeholder="Day number"><br/>
+            <input id="time" placeholder="What time"><br/> <!-- don't actually accept time as a string... have something more robust later. -->
+            <input id="priority" placeholder="Priority: low 1 > 2 > 3 high"><br/>
+            <input id="link" placeholder="Enter link"><br/>
+            <p>Repeat event?<input type="checkbox" id="repeat"><br/></p>
+            <input id="often" placeholder="Frequency"><br/>
+            <button id="goBack">Go back</button> <button id="submit">Add it!</button>
+            <p id="conflict">That date is already taken!</p>
+          
+        </div>
+
+        <div class="searchAnEvent">
+            <br/>
+            <h3 id="title3">Search for an event</h3>
+            <input id="lookUp" placeholder="Name of event"><br/>
+            <button id="searching">Find it!</button>
+            <p id="searchResult"></p>
+        </div>
+
+        <div class="calOptions">
+            <h2 id="title2">Select an option to display</h2>
+            <!--<button id="todayAll">Today's Meetings</button><br/>-->
+            <button id="monthAll">This Month's Meetings</button><br/>
+            <button id="meetAll">All Meetings</button><br/>
+            <br/>
+            <button id="back">Go back</button>
+        </div>
+
+        <div class="monthlyView">
+            <ul id="monthlyList"><!-- events of the month go here --></ul>
+            <button class="mainMenu">Main Menu</button>
+        </div>
+
+        <div class="allView">
+            <ul id="allList"><!-- all events in calendar go here --></ul>
+            <button class="mainMenu">Main Menu</button>
+        </div>
+<!--
+not sure why there are 2 video elements on this page so I'm just gonna remove this?
+        <div>
+            <video id="video"></video>
+            <canvas id="canvas"></canvas>
+        </div>
+-->
+    </body>
+</html>
